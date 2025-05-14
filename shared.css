@@ -27,10 +27,10 @@ body {
   background-color: #1c1c2c !important;
   transition: all 0.2s ease-in-out;
   height: 190px !important;
-  transform: scale(0.92);
+  transform: scale(0.80);
 }
 .BasicGameTile:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
   height: 190px !important; /* Yükseklik sabit, sadece genişlik büyür */
   border: 2px solid #f43c04;
   z-index: 2;
@@ -63,7 +63,7 @@ body {
   background-position: center center !important;
   filter: brightness(0.7);
   z-index: 0;
-  transform: scale(0.80);
+  transform: scale(0.95);
 }
 
 /* === ALT BÖLÜMLER (What's New vs.) aşağıya itildi === */
