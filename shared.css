@@ -63,7 +63,7 @@ body {
   background-position: center center !important;
   filter: brightness(0.7);
   z-index: 0;
-  transform: scale(0.75);
+  transform: scale(0.80);
 }
 
 /* === ALT BÖLÜMLER (What's New vs.) aşağıya itildi === */
@@ -87,6 +87,11 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
+.quickaccessmenu_QuickAccessMenuButton_3U1uH {
+  border-radius: 12px !important;
+  background-color: transparent !important;
+}
+
 button:hover,
 .SteamUIButton:hover,
 .DialogButton:hover {
@@ -99,6 +104,6 @@ button:hover,
 .mainmenu_MainMenu_1l2ek {
   backdrop-filter: blur(12px) !important; /* Blur efekti */
   -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
-  border-right: 1px solid rgba(255, 255, 255, 0.05);  /* Hafif çizgi efekti */
+  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
   border-radius: 12px !important; /* Kenarları yuvarla */
 }
