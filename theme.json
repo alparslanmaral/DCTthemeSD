@@ -1,0 +1,11 @@
+{
+  "name": "DCT Custom Theme",
+  "author": "DCT Studios",
+  "version": "v1.0",
+  "description": "Basic, smooth and modern theme.",
+  "target": "Other",
+  "manifest_version": 8,
+  "inject": {
+    "shared.css": ["bigpicture", "QuickAccess", "MainMenu"]
+  }
+}

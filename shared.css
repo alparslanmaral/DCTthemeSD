@@ -1,0 +1,103 @@
+/* === GENEL ARKA PLAN ve YAZI FONTU === */
+body {
+  background-color: #0c0c24 !important;
+  font-family: "Axiforma", sans-serif !important;
+  color: white !important;
+}
+
+/* === OYUNLAR: Ortaya hizalanmış ama UI'yı kaplamıyor === */
+.gamepadhomerecentgames_RecentGamesInnerContainer_282X0 {
+  height: calc(100vh - 300px);
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* === CAROUSEL: Ortalanmış, boşluk bırakıyor === */
+.basicgamecarousel_BasicGameCarousel_3MdH5 {
+  position: relative !important;
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* === OYUN KUTULARI === */
+.BasicGameTile {
+  border-radius: 18px !important;
+  overflow: hidden;
+  background-color: #1c1c2c !important;
+  transition: all 0.2s ease-in-out;
+  height: 190px !important;
+  transform: scale(0.92);
+}
+.BasicGameTile:hover {
+  transform: scale(1.05);
+  height: 190px !important; /* Yükseklik sabit, sadece genişlik büyür */
+  border: 2px solid #f43c04;
+  z-index: 2;
+}
+
+/* === OYUN COVER GÖRSELLERİ (Kapak) === */
+.BasicGameTile .LibraryItemBoxart,
+.BasicGameTile .capsule,
+.BasicGameTile img {
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+/* === LABEL (Oyun isimleri) === */
+.basicgamecarousel_CarouselGameLabelWrapper_ZkD6W {
+  position: absolute;
+  top: -65px; /* Biraz daha yukarı */
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  z-index: 3;
+}
+
+/* === BANNER GÖRSELLER === */
+.RecentGamesBackgroundContainer,
+.RecentGamesBackgroundImages {
+  height: 200vh !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  filter: brightness(0.7);
+  z-index: 0;
+}
+
+/* === ALT BÖLÜMLER (What's New vs.) aşağıya itildi === */
+.gamepadhome_TabbedContent_cE1Sa {
+  margin-top: 150px;
+}
+
+/* === TÜM BUTONLARDA CURVED TASARIM === */
+.SteamUIButton,
+.DialogButton,
+.QuickAccessTab,
+.quickaccessmenu_QuickAccessMenuButton_3U1uH,
+.quickaccessmenu_QuickAccessMenuItem_1-mgU,
+.quickaccessmenu_QuickAccessMenuHeaderButton_3YqOS,
+button {
+  border-radius: 12px !important;
+  background-color: #1c1c2c !important;
+  color: white !important;
+  border: none;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+.SteamUIButton:hover,
+.DialogButton:hover {
+  background-color: #f43c04 !important;
+  color: white !important;
+  transform: scale(1.03);
+}
+
+/* === MAIN MENU YARIM ŞEFFAF BACKGROUND ve BLUR EFECTİ === */
+.mainmenu_MainMenu_1l2ek {
+  background-color: rgba(12, 12, 36, 0.6) !important; /* Yarı şeffaf */
+  backdrop-filter: blur(12px) !important; /* Blur efekti */
+  -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
+  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
+}
