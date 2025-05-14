@@ -58,11 +58,12 @@ body {
 /* === BANNER GÖRSELLER === */
 .RecentGamesBackgroundContainer,
 .RecentGamesBackgroundImages {
-  height: 200vh !important;
+  height: 120vh !important;
   background-size: cover !important;
   background-position: center center !important;
   filter: brightness(0.7);
   z-index: 0;
+  transform: scale(0.75);
 }
 
 /* === ALT BÖLÜMLER (What's New vs.) aşağıya itildi === */
@@ -98,6 +99,6 @@ button:hover,
 .mainmenu_MainMenu_1l2ek {
   backdrop-filter: blur(12px) !important; /* Blur efekti */
   -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
-  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
+  border-right: 1px solid rgba(255, 255, 255, 0.05);  /* Hafif çizgi efekti */
   border-radius: 12px !important; /* Kenarları yuvarla */
 }
