@@ -98,6 +98,6 @@ button:hover,
 .mainmenu_MainMenu_1l2ek {
   backdrop-filter: blur(12px) !important; /* Blur efekti */
   -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
-  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
+  border-right: 1px solid rgba(255, 255, 255, 0.05);  /* Hafif çizgi efekti */
   border-radius: 12px !important; /* Kenarları yuvarla */
 }
