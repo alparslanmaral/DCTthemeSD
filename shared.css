@@ -96,8 +96,8 @@ button:hover,
 
 /* === MAIN MENU YARIM ŞEFFAF BACKGROUND ve BLUR EFECTİ === */
 .mainmenu_MainMenu_1l2ek {
-  background-color: rgba(12, 12, 36, 0.6) !important; /* Yarı şeffaf */
   backdrop-filter: blur(12px) !important; /* Blur efekti */
   -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
   border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
+  border-radius: 12px !important; /* Kenarları yuvarla */
 }
