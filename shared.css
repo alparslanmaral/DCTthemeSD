@@ -1,8 +1,18 @@
+/* === RENKLİ TOGGLE BUTONLAR İÇİN ROOT === */
+:root {
+	--colored-toggles-main-color: #f43c04;
+	--colored-toggles-static-color: var(--colored-toggles-main-color);
+	--colored-toggles-friends-text-color: black;
+	--colored-toggles-animation: none;
+	--gpColor-Blue: var(--colored-toggles-main-color) !important;
+  --round-radius-size: 15px;
+}
+
 /* === GENEL ARKA PLAN ve YAZI FONTU === */
 body {
-  background-color: #0c0c24 !important;
+  background-color: #1C1C2C !important;
   font-family: "Axiforma", sans-serif !important;
-  color: white !important;
+  color: #F43C04 !important;
 }
 
 /* === OYUNLAR: Ortaya hizalanmış ama UI'yı kaplamıyor === */
@@ -24,15 +34,15 @@ body {
 .BasicGameTile {
   border-radius: 18px !important;
   overflow: hidden;
-  background-color: #1c1c2c !important;
+  background-color: #1C1C2C !important;
   transition: all 0.2s ease-in-out;
   height: 190px !important;
   transform: scale(0.80);
 }
 .BasicGameTile:hover {
-  transform: scale(1.2);
-  height: 190px !important; /* Yükseklik sabit, sadece genişlik büyür */
-  border: 2px solid #f43c04;
+  transform: scale(1);
+  height: 240px !important; /* Yükseklik sabit, sadece genişlik büyür */
+  border: 12px solid #F43C04;
   z-index: 2;
 }
 
@@ -40,7 +50,7 @@ body {
 .BasicGameTile .LibraryItemBoxart,
 .BasicGameTile .capsule,
 .BasicGameTile img {
-  border-radius: 14px !important;
+  border-radius: 22px !important;
   overflow: hidden;
 }
 
@@ -48,11 +58,12 @@ body {
 .basicgamecarousel_CarouselGameLabelWrapper_ZkD6W {
   position: absolute;
   top: -65px; /* Biraz daha yukarı */
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   color: #ffffff;
   text-align: center;
   z-index: 3;
+  text-shadow: 0 10px 20px #F43C04; /* Yatay kaydırma, dikey kaydırma, bulanıklık yarıçapı, renk */
 }
 
 /* === BANNER GÖRSELLER === */
@@ -61,9 +72,9 @@ body {
   height: 120vh !important;
   background-size: cover !important;
   background-position: center center !important;
-  filter: brightness(0.7);
+  filter: brightness(0.9);
   z-index: 0;
-  transform: scale(0.95);
+  transform: scale(1);
 }
 
 /* === ALT BÖLÜMLER (What's New vs.) aşağıya itildi === */
@@ -80,7 +91,7 @@ body {
 .quickaccessmenu_QuickAccessMenuHeaderButton_3YqOS,
 button {
   border-radius: 12px !important;
-  background-color: #1c1c2c !important;
+  background-color: #1C1C2C !important;
   color: white !important;
   border: none;
   padding: 8px 16px;
@@ -95,7 +106,7 @@ button {
 button:hover,
 .SteamUIButton:hover,
 .DialogButton:hover {
-  background-color: #f43c04 !important;
+  background-color: #F43C04 !important;
   color: white !important;
   transform: scale(1.03);
 }
@@ -106,4 +117,579 @@ button:hover,
   -webkit-backdrop-filter: blur(12px) !important; /* Safari için destek */
   border-right: 1px solid rgba(255, 255, 255, 0.05); /* Hafif çizgi efekti */
   border-radius: 12px !important; /* Kenarları yuvarla */
+}
+
+
+
+
+
+
+/* ===  === */
+/* ===  === */
+/* ===  === */
+/* ===  === */
+/* === RENKLİ TOGGLE BUTONLARIN KODLARI === */
+
+/* Toggle açık */
+.gamepaddialog_ToggleRail_2JtC3::before {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+.gamepadslider_SliderTrack_Mq25N::before {
+    background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Ekteki tiklerde aktifleştirme */
+div .gamepadslider_SliderNotchTick_Fv1Ht.gamepadslider_TickActive_1gnUV {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+} 
+
+/* Ana ekrandaki arkadaşlar kısmı */
+.appdetailsfriendssection_FriendsPlayingNowBadge_38sNQ.appdetailsfriendssection_InFriendsTab_15Vpl {
+	background: var(--colored-toggles-main-color);
+	color: var(--colored-toggles-friends-text-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Sol menüdeki şimdiki sayfayı gösteren işaret */
+div .mainmenu_Item_2w9Tp .mainmenu_ActiveDot_1uLVH,
+.mainmenuapprunning_NavigationMenuItem_1G0K4 .mainmenuapprunning_ActiveDot_13YbV {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Oyunu oyna butonu */
+.BasicUI .appactionbutton_Green_3cI5T .appactionbutton_ButtonChild_2AzIX.Focusable:focus {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Bir oyundaki oyna butonundaki oyna simgesi */
+.BasicUI .appactionbutton_Green_3cI5T .appactionbutton_ButtonChild_2AzIX.Focusable:focus > svg {
+	color: var(--colored-toggles-friends-text-color);
+}
+
+/* Oyna butonundaki text */
+.appactionbutton_PlayButton_3ydig.gpfocus > .appactionbutton_ButtonText_33cnX {
+	color: var(--colored-toggles-friends-text-color);
+}
+
+/* Oyndaki indir tuşu */
+.BasicUI .appactionbutton_ButtonChild_2AzIX.Focusable:focus {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Bir oyunun indirme butonundaki indirme simgesi */
+.BasicUI .appactionbutton_ButtonChild_2AzIX.Focusable:focus > svg {
+	color: var(--colored-toggles-friends-text-color);
+}
+
+/* Bir oyunun indirme düğmesindeki metin */
+.BasicUI .appactionbutton_ButtonChild_2AzIX.Focusable:focus .appactionbutton_ButtonText_33cnX {
+	color: var(--colored-toggles-friends-text-color);
+}
+
+/* Kütüphanedeki yeni yazısı */
+.appportrait_AppPortraitBanner_N8aJr {
+	background: var(--colored-toggles-main-color); 
+	color: var(--colored-toggles-friends-text-color);
+	animation: var(--colored-toggles-animation);
+  }
+
+/* Ana menüde oyun yükleme işleminin alt kısmında bulunan ilerleme çubuğu. */
+.appportrait_UninstalledBar_kX-tI .appportrait_UninstalledProgressBar_mA39H {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* Üst başlıkta indirme çubuğu. */
+.header_HeaderDownloadContainer_2ssr3 .header_HeaderAppPortraitContainer_1PbL3 .header_HeaderDownloadProgressBarBackground_vo3Tt .header_HeaderDownloadProgressBar_AK_Ax {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* İndirme butonunun altındaki indirme çubuğu. */
+div .BasicUI .appdetailsplaysection_DetailsProgressContainer_25YVD .appdetailsplaysection_DetailsProgressBar_1FnTq {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* İndirmeler ekranında İndirmeye Devam Et butonu. */
+div .downloads_SectionItemWrapper_21P7c.gpfocus .downloads_SectionItem_1VNuY.downloads_Active_IbePL .downloads_Button_3oavR.DialogButton:enabled {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+/* İndirme barı üstündeki indir metni. */
+div .downloads_SectionItemStatus_1Sygg .downloads_Downloading_33BlY .downloads_State_2ns4w {
+	color: var(--colored-toggles-static-color);
+}
+
+.downloads_Button_3oavR {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+.progressbar_Percent_2_0Jo {
+	animation: var(--colored-toggles-animation);
+}
+
+/* Oyun detay menüsünde Oynat/Yükle düğmeleri */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gamepadcontextmenu_Positive_2gJWj, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Stream, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Connect, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Launch, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.PlayMusic, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Play, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Resume, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.BorrowApp,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gamepadcontextmenu_Emphasis_1viOG, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Download, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Update, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.PreLoad, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Install, .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Pause,
+button.gamepaddialog_Button_1kn70.DialogButton.gpfocus.Primary, button.gamepaddialog_Button_1kn70.DialogButton:active.Primary, button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.Primary, button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.Primary, button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.Primary, button.gamepaddialog_Button_1kn70.DialogButton:active:active.Primary, button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.Primary, button.gamepaddialog_Button_1kn70.DialogButton:hover:active.Primary, button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Primary, button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Primary {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+	color: var(--colored-toggles-friends-text-color);
+}
+
+/* Başarı ilerleme çubuğu */
+.BasicUI .appdetailsachievementssection_AchievementProgressContainer_3ns91 .appdetailsachievementssection_AchievementProgress_3Rm36 {
+	background: var(--colored-toggles-main-color);
+	animation: var(--colored-toggles-animation);
+}
+
+
+
+
+
+
+/* ===  === */
+/* ===  === */
+/* ===  === */
+/* ===  === */
+/* YUVARLAK CURVED KÖŞELER */
+
+.DialogInput {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+button.gamepaddialog_Button_1kn70.DialogButton,
+button.gamepaddialog_Button_1kn70.DialogButton.Primary,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary,
+button.gamepaddialog_Button_1kn70.DialogButton:active,
+button.gamepaddialog_Button_1kn70.DialogButton:active.Primary,
+button.gamepaddialog_Button_1kn70.DialogButton:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:hover.Primary,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary,
+div.gamepadcontextmenu_contextMenuContents_sIgB- {
+  border-radius: var(--round-radius-size);
+}
+.ModalPosition_Content
+  > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
+  border-radius: var(--round-radius-size);
+}
+
+/* Son oyunlar ve kütüphane */
+.libraryassetimage_Image_24_Au:not(
+    .gamepadhomerecentgames_RecentGamesBackgroundImage_3Mp8R
+  ) {
+  border-radius: var(--round-radius-size);
+}
+.appportrait_LibraryItemBox_WYgDg {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .appportrait_LibraryItemBox_WYgDg::after {
+  border-radius: var(--round-radius-size);
+}
+.gamepadsearch_ResultTemplateImage_3K3Bx {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .libraryassetimage_GreyBackground_2E7G8 {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .allcollections_Collection_3IWn- {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+.steamdeckcompatfilter_CompatFilterDialog_21qvB {
+  border-radius: var(--round-radius-size);
+}
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3:nth-child(1) {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0px 0px;
+}
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3:nth-child(4) {
+  border-radius: 0px 0px var(--round-radius-size) var(--round-radius-size);
+}
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3:last-child {
+  border-radius: var(--round-radius-size);
+}
+.steamdeckcompatfilter_CompatFilterDialogRow_O7cW3:nth-of-type(
+    1
+  ):nth-last-child(3) {
+  border-radius: var(--round-radius-size) !important;
+}
+.BasicUI
+  .appfilterpane_Container_170Np
+  .appfilterpane_FilterArea_1ennW
+  .appfilterpane_FilterBucket_1axoi {
+  border-radius: var(--round-radius-size);
+}
+.appportrait_AppPortraitBanner_N8aJr {
+  border-radius: var(--round-radius-size);
+}
+.gamepadlibrary_AppGridFilterHeader_eGFYo {
+  border-radius: var(--round-radius-size);
+}
+.basicgamecarousel_TextBoxCarouselContents_3bvCH {
+  border-radius: var(--round-radius-size);
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
+  border-radius: var(--round-radius-size);
+}
+
+/* Yeni neler var kısmı */
+.gamepadhomewhatsnew_Darkener_1n_1X {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0px 0px;
+}
+.gamepadhomewhatsnew_EventImage_116GS {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0px 0px;
+}
+.gamepadhomewhatsnew_EventPreviewOuterWrapper_10b1V:hover
+  .gamepadhomewhatsnew_EventImage_116GS,
+.gpfocus .gamepadhomewhatsnew_EventImage_116GS {
+  border-radius: calc(var(--round-radius-size) + 10px)
+    calc(var(--round-radius-size) + 10px) 0px 0px;
+}
+.gamepadhomewhatsnew_EventInfo_6TGe7 {
+  border-radius: 0px 0px var(--round-radius-size) var(--round-radius-size);
+}
+.recentlycompleted_RecentlyCompletedItem_3OC7i {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+.marketingmessages_MarketingMessage_28UlE {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+/* Haberler */
+.apppartnereventspage_PartnerEvent_lwprN {
+  border-radius: var(--round-radius-size) !important;
+  overflow: hidden;
+}
+.partnereventshared_Button_3P0Tm.partnereventshared_Icon_3p1Hj {
+  border-radius: var(--round-radius-size) !important;
+}
+.discussionwidget_VoteContainer_1uhQY,
+.discussionwidget_DiscussContainer_3tXYJ,
+.discussionwidget_ShareContainer_cLK_F {
+  border-radius: var(--round-radius-size) !important;
+}
+
+.appactivityday_PartnerEventMediumImage_Image_VytJz {
+  border-radius: var(--round-radius-size);
+}
+
+/* Arkadaşlar arasında popüler */
+.gamecapsule_GameCapsule_fXdhj .gamecapsule_BottomBar_3-GyQ {
+  height: 30px;
+  border-radius: 0px 0px var(--round-radius-size) var(--round-radius-size);
+}
+.gamecapsule_GameCapsule_fXdhj
+  > .libraryassetimage_GreyBackground_2E7G8
+  > img.libraryassetimage_Image_24_Au.libraryassetimage_Visibility_3d_bT.libraryassetimage_Visible_yDr03 {
+  border-radius: 0px;
+}
+.gamecapsule_GameCapsule_fXdhj > .libraryassetimage_GreyBackground_2E7G8 {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0px 0px;
+  overflow: hidden;
+}
+.gamecapsule_GameCapsule_fXdhj {
+  background-color: #00000000;
+}
+.gamecapsule_Friends_3gKVI {
+  margin-left: 10px;
+}
+.gamecapsule_InLibrary_fyHna {
+  border-radius: var(--round-radius-size);
+}
+
+/* Arkadaşlar */
+.gamepadhomefriends_FavoriteFriend_3SLpz,
+.gamepadhomefriends_GoToFriends_MVc_6 {
+  border-radius: var(--round-radius-size);
+}
+.gamepadhomefriends_InGameGame_KLo2n {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI
+  .appactivityday_ActivityAchievementUnlocked_yJLy7
+  .appactivityday_PrimaryAchievement_26Qli {
+  border-radius: var(--round-radius-size);
+}
+.appactivityday_Event_UVeN0 {
+  border-radius: var(--round-radius-size);
+  border-image: none;
+  overflow: hidden;
+}
+.appactivityday_PlayedGameFirstTime_3fdEo
+  > .appactivityday_EventHeadline_QCKBq:first-child:nth-last-child(2),
+.appactivityday_ReceivedNewGame_35ZQ6
+  > .appactivityday_EventHeadline_QCKBq:only-child,
+.appactivityday_AddedGameToWishlist_x6i4r
+  > .appactivityday_EventHeadline_QCKBq:only-child {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .appactivityday_Event_UVeN0 .appactivityday_EventBody_NEMXh {
+  border-radius: 0px 0px var(--round-radius-size) var(--round-radius-size);
+}
+.BasicUI
+  .appactivityday_ActivityAchievementUnlocked_yJLy7
+  .appactivityday_PrimaryAchievement_26Qli {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI
+  .appactivityday_ScreenshotCarousel_1pdQd
+  .appactivityday_CarouselThumbs_1tRKR
+  .appactivityday_CarouselThumb_1Lot- {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+.gamepadsearch_ResultTemplateImage_3K3Bx {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+.FriendPickerFriendList,
+.FriendPicker_SuggestedFriend.gpfocus .friend,
+.FriendPicker ._DialogInputContainer {
+  border-radius: var(--round-radius-size);
+}
+
+/* Oyun detayları */
+.BasicUI .spotlightgameplaysummary_SummaryCarouselContainer_wgbDI {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI
+  .appdetailssection_AppDetailsSectionContainer_31ptF.appdetailssection_RightColumnSection_3KfxI {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .spotlightgameplaysummary_SummaryAchievement_qBmIH {
+  border-radius: var(--round-radius-size);
+}
+.posttextentry_PostTextEntry_3x31A .posttextentry_PostTextEntryArea_1JlC2 {
+  border-radius: var(--round-radius-size);
+}
+.appdetailsachievementssection_AchievementCarouselItem_mbFSn.appdetailsachievementssection_Detailed_3KGi6 {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .appdetailscommunityfeed_CommunityItem_3QS6O {
+  border-radius: var(--round-radius-size);
+}
+.appdetailscommunityfeed_ArtItem_1aP1b {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0px 0px;
+}
+.appdetailsgameinfopanel_DeckVerifiedInfo_IIJei
+  .appdetailsgameinfopanel_Details_3sfpA {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .appdetailsprimarylinkssection_Anchor_DY4_w {
+  border-radius: var(--round-radius-size);
+}
+.basicappdetailssectionstyler_DeckVerifiedFeedbackConfirmationContainer_3G0l_,
+.basicappdetailssectionstyler_DeckVerifiedFeedbackContainer_3Y8xV {
+  border-radius: var(--round-radius-size);
+}
+.basicappdetailssectionstyler_DeckVerifiedFeedbackConfirmationContainer_3G0l_
+  .basicappdetailssectionstyler_DeckVerifiedFeedbackButton_2F-oC,
+.basicappdetailssectionstyler_DeckVerifiedFeedbackContainer_3Y8xV
+  .basicappdetailssectionstyler_DeckVerifiedFeedbackButton_2F-oC {
+  border-radius: var(--round-radius-size);
+}
+.BasicUI .appdetailssection_Highlight_38t1m {
+  border-radius: var(--round-radius-size) var(--round-radius-size) 0 0;
+}
+.appdetailsactivitysection_NoActivity_2-kDc,
+.appdetailsactivitysection_Loading_3UShz {
+  border-radius: var(--round-radius-size);
+}
+.appdetailsgameinfopanel_DeckVerifiedInfo_IIJei {
+  border-radius: var(--round-radius-size);
+}
+.basicappdetailssectionstyler_AppActionButton_QsZdW.appactionbutton_PlayButtonContainer_1FnJ6 {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
+}
+.basicappdetailssectionstyler_AppButtons_1thLD /* This makes the button a circle */
+  .appdetailsplaysection_MenuButton_3qDWQ {
+  border-radius: var(--round-radius-size);
+}
+
+.appdetailsdlcsection_Item_Ie7sd,
+.appdetailsdlcsection_Item_Ie7sd .libraryassetimage_GreyBackground_2E7G8,
+.appdetailsdlcsection_Item_Ie7sd img,
+.appdetailsdlcsection_Remainder_2Dggp {
+  border-radius: var(--round-radius-size) !important;
+}
+
+.appdetailsdlcsection_Gloss_HAvWs {
+  background: none !important;
+}
+
+.spotlightgameplaysummary_SummaryScreenshot_2gFx1,
+.spotlightgameplaysummary_SummaryScreenshot_2gFx1 > img:first-child,
+.appdetailsscreenshotssection_Thumbnail_2B8Nk,
+.appdetailsscreenshotssection_Thumbnail_2B8Nk > img:first-child {
+  border-radius: var(--round-radius-size);
+}
+
+button.appdetailsbutton_AppDetailsButton_3Cdin.appdetailsbutton_BottomRight_3nJyY.DialogButton.gamepaddialog_Button_1kn70,
+button.appdetailsactivitysection_FetchMoreContainer_39Zur.DialogButton.gamepaddialog_Button_1kn70.Focusable {
+  border-radius: var(--round-radius-size) !important;
+}
+
+/* Medya */
+.mediapage_ImageContainer_120HU {
+  border-radius: var(--round-radius-size);
+}
+.mediapage_Screenshot_3Qh8h {
+  border-radius: calc(var(--round-radius-size) + 4px);
+}
+
+/* İndirmeler */
+.downloads_Button_3oavR.gamepaddialog_Button_1kn70.DialogButton[type="button"], /* This makes the button a circle */
+.downloads_SectionItem_1VNuY,
+.downloads_RemoveAllButton_1GdR5 {
+  border-radius: var(--round-radius-size) !important;
+}
+.downloads_Active_IbePL
+  > .downloads_SectionList_OINnO
+  > .downloads_SectionItemWrapper_21P7c
+  > .downloads_SectionItem_1VNuY {
+  border-radius: 0px !important;
+}
+.downloadgraph_HeroContainer_3WauY > .libraryassetimage_GreyBackground_2E7G8,
+.downloadgraph_HeroContainer_3WauY
+  > .libraryassetimage_GreyBackground_2E7G8
+  > .libraryassetimage_Image_24_Au {
+  border-radius: 0px !important;
+}
+
+/* Modlar */
+.CssLoader_ThemeBrowser_SingleItem_BgImage,
+.CssLoader_ThemeBrowser_SingleItem_BgOverlay {
+  border-radius: var(--round-radius-size) !important;
+  overflow: hidden;
+}
+
+/* Ana menü guide */
+.overlayguides_GuideListItemBase_1etIu {
+  border-radius: var(--round-radius-size);
+}
+
+/* Ana menü başarılar */
+.mainmenuapprunning_OverlayAchievements_2Qced
+  .achievementslist_AchievementListItemBase_2Kmn7,
+.mainmenuapprunning_OverlayAchievements_2Qced
+  .achievementslist_GlobalAchievementListItem_316Uo,
+.mainmenuapprunning_OverlayAchievements_2Qced
+  .achievementslist_AchievementList_1UXC2,
+.mainmenuapprunning_OverlayAchievements_2Qced
+  .achievementsheader_StatsBlock__gDkI {
+  border-radius: var(--round-radius-size);
+}
+
+/* Başarılar kısmı */
+
+.achievementsheader_StatsBlock__gDkI,
+.achievementspage_AchievementTabs_gxNvE
+  .achievementslist_AchievementListItemBase_2Kmn7,
+.achievementspage_AchievementTabs_gxNvE
+  .achievementslist_GlobalAchievementListItem_316Uo {
+  border-radius: var(--round-radius-size);
+}
+
+.achievementspage_CompareButtonContainer_1UeO0
+  button.gamepaddropdown_DropDownControlButton_28bny.DialogButton.gamepaddialog_Button_1kn70.Focusable {
+  border-radius: var(--round-radius-size) !important;
+}
+
+.gamepaddialog_GamepadDialogContent_3joNk:not(
+    .gamepadpagedsettings_PagedSettingsDialog_PageContent_wIOLO
+  ) {
+  border-radius: var(--round-radius-size);
+}
+
+/* Ayarlar */
+.DialogCheckbox_Container,
+.gamepadslider_EditableValue_2DXnl {
+  border-radius: var(--round-radius-size) !important;
+}
+
+.controllerconfigurator_interstitial_ControlLabel_tGJeF,
+.controllerconfiguratorchooseconfiguration_ConfigurationButton_2luCN, /* This is selecting a controller layout */
+.controllerconfigurator_CommunityConfigsCallout_1xfC8 {
+  border-radius: var(--round-radius-size);
+}
+
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_TopGapSmall_2evqi {
+  margin-top: 0px !important;
+}
+
+.radio_Active_3ZBFo {
+  border-radius: var(--round-radius-size);
+}
+
+.RadioButton {
+  border-radius: var(--round-radius-size);
+}
+
+.radio_Group_2qYC3 {
+  border-radius: var(--round-radius-size);
+}
+
+.gamepadcontextmenu_contextMenuContents_sIgB-:first-child
+  .gamepadcontextmenu_ContextMenuSeparator_1KL6n {
+  height: 0px;
+}
+
+.gamepadcontextmenu_contextMenuItem_1sdvo:first-child {
+  border-top-left-radius: var(--round-radius-size);
+  border-top-right-radius: var(--round-radius-size);
+}
+
+.gamepadcontextmenu_contextMenuContents_sIgB- > :last-child {
+  border-bottom-left-radius: var(--round-radius-size);
+  border-bottom-right-radius: var(--round-radius-size);
+}
+
+.gamepadcontextmenu_contextMenuContents_sIgB- {
+  margin-left: 5px;
+}
+
+.contextMenuGameOptions {
+  border-radius: 0px !important;
+}
+
+.BasicUI .appactionbutton_ButtonChild_2AzIX {
+  overflow: hidden;
+}
+.BasicUI .appactionbutton_ButtonChild_2AzIX.Focusable:focus:focus::after {
+  transform: scaleX(1.1);
+}
+
+/* Aktif ürün diyaloğu */
+.activateproductdialog_ProductActivationInfoContainer_1Amz7 {
+  border-radius: var(--round-radius-size);
+}
+
+/* ProtonDB desteği by OMGDuke */
+.protondb-decky-indicator {
+  border-radius: var(--round-radius-size) !important;
+}
+
+/* İndirme iconu ve çubuğu */
+.header_HeaderDownloadContainer_2ssr3 .libraryassetimage_Container_1R9r2 {
+  border-radius: var(--round-radius-size) !important;
+}
+.header_HeaderDownloadProgressBarBackground_vo3Tt {
+  border-radius: var(--round-radius-size);
+  overflow: hidden;
 }
